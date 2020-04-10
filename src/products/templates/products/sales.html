@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}performance{% endblock title %}
+
+{% block content %}
+<h1>Sales</h1>
+    {% if graph %}
+        <div class="block-center">
+            <img src="data:image/png;base64, {{ graph | safe}}" height="800" width="auto">
+        </div>
+    {% endif %}
+{% endblock content %}
